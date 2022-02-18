@@ -1,0 +1,59 @@
+initializr:
+  bootVersions:
+    - id: 2.6.3.RELEASE
+      name: 2.6.3
+      default: true
+  group-id:
+    value: dev.dashaun
+  artifact-id:
+    value: practice
+  name:
+    value: deliberate
+  description:
+    value: Deliberately practicing to build better software, faster.
+  version:
+    value: 0.0.1-SNAPSHOT
+  packageName:
+    value: dev.dashaun.practice      
+  dependencies:
+    - name: Web
+      content:
+        - name: Web
+          id: web
+          description: Servlet web application with Spring MVC and Tomcat
+  languages:
+    - name: Java
+      id: java
+      default: true
+    - name: Kotlin
+      id: kotlin
+      default: false
+    - name: Groovy
+      id: groovy
+      default: false
+  javaVersions:
+    - id: 17
+      default: true
+    - id: 11
+      default: false
+  packagings:
+    - name: Jar
+      id: jar
+      default: true
+  types:
+    - name: Maven Project
+      id: maven-project
+      description: Generate a Maven based project archive
+      tags:
+        build: maven
+        format: project
+      default: true
+      action: /starter.zip
+    - name: Gradle Project
+      id: gradle-project
+      description: Generate a Gradle based project archive
+      tags:
+        build: gradle
+        format: project
+      default: false
+      action: /starter.zip
